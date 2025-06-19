@@ -1,9 +1,9 @@
 ﻿// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-#include "Engine/KBECommon.h"
+#include "../Engine/KBECommon.h"
 
-#include "Engine/MonsterBase.h"
+#include "../Engine/MonsterBase.h"
 
 namespace KBEngine
 {

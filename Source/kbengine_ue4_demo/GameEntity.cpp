@@ -3,8 +3,8 @@
 #include "GameEntity.h"
 #include "kbengine_ue4_demo.h"
 #include "GameModeWorld.h"
-#include "Engine/KBEngine.h"
-#include "Engine/Entity.h"
+#include "../Engine/KBEngine.h"
+#include "../Engine/Entity.h"
 #include "Runtime/UMG/Public/UMG.h"
 #include "Runtime/UMG/Public/UMGStyle.h"
 #include "Runtime/UMG/Public/Slate/SObjectWidget.h"
@@ -104,9 +104,9 @@ void AGameEntity::FaceRotation(FRotator NewRotation, float DeltaTime)
 	Super::FaceRotation(CurrentRotation, DeltaTime);
 }
 
-void AGameEntity::setModelID(int modelID)
+void AGameEntity::setModelID(int inModelID)
 {
-	this->modelID = modelID;
+	this->modelID = inModelID;
 
 	if (this->modelID == ModelID_Avatar)
 	{

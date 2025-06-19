@@ -1,9 +1,9 @@
 ﻿// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-#include "Engine/KBECommon.h"
+#include "../Engine/KBECommon.h"
 
-#include "Engine/AvatarBase.h"
+#include "../Engine/AvatarBase.h"
 
 namespace KBEngine
 {

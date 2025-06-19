@@ -1,5 +1,5 @@
 ﻿#include "NPC.h"
-#include "Engine/Entity.h"
+#include "../Engine/Entity.h"
 #include "LogicEvents.h"
 
 namespace KBEngine

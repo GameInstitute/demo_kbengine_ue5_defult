@@ -8,6 +8,13 @@ public class kbengine_ue4_demo : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
+        PublicIncludePaths.AddRange(
+            new string[] {
+				// ... add public include paths required here ...
+				"KBEnginePlugins",
+            }
+            );
+
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UMG", "Slate", "SlateCore", "KBEnginePlugins" });
 	}
 }

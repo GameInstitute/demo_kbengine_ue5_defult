@@ -2,7 +2,7 @@
 
 #include "GameModeDemoBase.h"
 #include "kbengine_ue4_demo.h"
-#include "Engine/KBEngine.h"
+#include "KBEnginePlugins/Engine/KBEngine.h"
 
 AGameModeDemoBase::AGameModeDemoBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {

@@ -1,8 +1,8 @@
 ﻿// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-#include "Engine/KBECommon.h"
-#include "Engine/TestBase.h"
+#include "../Engine/KBECommon.h"
+#include "../Engine/TestBase.h"
 
 namespace KBEngine
 {

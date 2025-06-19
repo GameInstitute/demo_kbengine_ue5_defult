@@ -10,16 +10,17 @@ public class KBEnginePlugins : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        bEnableUndefinedIdentifierWarnings = false;
 
         string[] PrivateModules = new string[] { "Slate", "SlateCore", "Networking", "Sockets", "OpenSSL" };
         string[] PublicModules = new string[] { "Core", "CoreUObject", "Engine"};
         List<string> PublicModulesList = new List<string>(PublicModules);
-
+        
         PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
-			}
+				Path.Combine(ModuleDirectory, "Engine"),
+				Path.Combine(ModuleDirectory, "Scripts"),
+            }
 			);
 				
 		PrivateIncludePaths.AddRange(

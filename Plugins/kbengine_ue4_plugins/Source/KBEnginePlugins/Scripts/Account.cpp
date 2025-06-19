@@ -1,7 +1,7 @@
 ﻿#include "Account.h"
-#include "Engine/Entity.h"
-#include "Engine/KBEngine.h"
-#include "Engine/KBDebug.h"
+#include "../Engine/Entity.h"
+#include "../Engine/KBEngine.h"
+#include "../Engine/KBDebug.h"
 #include "LogicEvents.h"
 
 namespace KBEngine

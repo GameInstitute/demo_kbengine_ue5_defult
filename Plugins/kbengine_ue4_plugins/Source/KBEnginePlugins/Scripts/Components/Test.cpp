@@ -1,6 +1,6 @@
 ﻿#include "Test.h"
-#include "Scripts/Avatar.h"
-#include "Scripts/LogicEvents.h"
+#include "../Scripts/Avatar.h"
+#include "../Scripts/LogicEvents.h"
 
 namespace KBEngine
 {

@@ -1,12 +1,12 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-#include "Engine/KBECommon.h"
-#include "Engine/KBEvent.h"
+#include "../Engine/KBECommon.h"
+#include "../Engine/KBEvent.h"
 #include "LogicEvents.generated.h"
 
 /**
-	ËùÓĞÓÉÂß¼­²ã²úÉúµÄÊÂ¼ş¶¼ÔÚÕâÀï¶¨Òå
+	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¶¨ï¿½ï¿½
 */
 
 USTRUCT(BlueprintType)
@@ -17,7 +17,7 @@ struct FAVATAR_INFOS
 	UPROPERTY(Category = KBEngine, EditAnywhere)
 	uint64 dbid;
 
-	// ÓÉÓÚÀ¶Í¼²»¿É¶ÁÈ¡uint64ÀàĞÍ£¬ Òò´ËÌá¹©Ò»¸ö×Ö·û´®ÀàĞÍÓÃÓÚ±È½ÏºÍ¶ÁÈ¡
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½É¶ï¿½È¡uint64ï¿½ï¿½ï¿½Í£ï¿½ ï¿½ï¿½ï¿½ï¿½á¹©Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±È½ÏºÍ¶ï¿½È¡
 	UPROPERTY(Category = KBEngine, BlueprintReadWrite, EditAnywhere)
 	FString sdbid;
 
@@ -40,7 +40,7 @@ struct FAVATAR_INFOS
 	UPROPERTY(Category = KBEngine, BlueprintReadWrite, EditAnywhere)
 	int level;
 
-	// ·şÎñ¶Ë¼ÇÂ¼µÄ×îºóÒ»´ÎËùÑ¡ÔñµÄ½ÇÉ«
+	// ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ä½ï¿½É«
 	UPROPERTY(Category = KBEngine, BlueprintReadWrite, EditAnywhere)
 	bool lastSelCharacter;
 };

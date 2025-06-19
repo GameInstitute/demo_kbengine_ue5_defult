@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "Scripts/LogicEvents.h"
+#include "KBEnginePlugins/Scripts/LogicEvents.h"
 #include "GameFramework/GameMode.h"
 #include "GameModeDemoBase.generated.h"
 

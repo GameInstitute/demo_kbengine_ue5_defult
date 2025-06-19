@@ -2,7 +2,7 @@
 
 #include "GameModeSelectAvatar.h"
 #include "kbengine_ue4_demo.h"
-#include "Engine/KBEngine.h"
+#include "KBEnginePlugins/Engine/KBEngine.h"
 
 AGameModeSelectAvatar::AGameModeSelectAvatar(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -20,7 +20,7 @@ void AGameModeSelectAvatar::installEvents()
 	KBENGINE_REGISTER_EVENT("onRemoveAvatar", onRemoveAvatar);
 
 	// begin enterworld
-	// Õâ¸öÊÂ¼ş´¥·¢Ê±ÎÒÃÇĞèÒªÇĞ»»µØÍ¼µ½ÓÎÏ·ÊÀ½çµØÍ¼
+	// ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ğ»ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 	KBENGINE_REGISTER_EVENT("addSpaceGeometryMapping", addSpaceGeometryMapping);
 }
 
@@ -43,7 +43,7 @@ void AGameModeSelectAvatar::addSpaceGeometryMapping_Implementation(const UKBEven
 
 void AGameModeSelectAvatar::reqCreateAvatar(uint8 roleType, const FString& name)
 {
-	// ÓÉÓÚAccountÊµÌå×¢²áÁË¸ÃÊÂ¼ş£¬ Èç¹û´ËÊ±AccountÊµÌå´æÔÚÄÇÃ´±ØÈ»»áÖ´ĞĞµ½¸ÃÊÂ¼ş 
+	// ï¿½ï¿½ï¿½ï¿½AccountÊµï¿½ï¿½×¢ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ê±AccountÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½È»ï¿½ï¿½Ö´ï¿½Ğµï¿½ï¿½ï¿½ï¿½Â¼ï¿½ 
 	UKBEventData_reqCreateAvatar* pEventData = NewObject<UKBEventData_reqCreateAvatar>();
 	pEventData->roleType = roleType;
 	pEventData->name = name;
@@ -52,7 +52,7 @@ void AGameModeSelectAvatar::reqCreateAvatar(uint8 roleType, const FString& name)
 
 void AGameModeSelectAvatar::reqRemoveAvatar(const FAVATAR_INFOS& avatarInfos)
 {
-	// ÓÉÓÚAccountÊµÌå×¢²áÁË¸ÃÊÂ¼ş£¬ Èç¹û´ËÊ±AccountÊµÌå´æÔÚÄÇÃ´±ØÈ»»áÖ´ĞĞµ½¸ÃÊÂ¼ş 
+	// ï¿½ï¿½ï¿½ï¿½AccountÊµï¿½ï¿½×¢ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ê±AccountÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½È»ï¿½ï¿½Ö´ï¿½Ğµï¿½ï¿½ï¿½ï¿½Â¼ï¿½ 
 	UKBEventData_reqRemoveAvatar* pEventData = NewObject<UKBEventData_reqRemoveAvatar>();
 	pEventData->avatarInfos = avatarInfos;
 	KBENGINE_EVENT_FIRE("reqRemoveAvatar", pEventData);
@@ -60,7 +60,7 @@ void AGameModeSelectAvatar::reqRemoveAvatar(const FAVATAR_INFOS& avatarInfos)
 
 void AGameModeSelectAvatar::selectAvatarGame(const FAVATAR_INFOS& avatarInfos)
 {
-	// ÓÉÓÚAccountÊµÌå×¢²áÁË¸ÃÊÂ¼ş£¬ Èç¹û´ËÊ±AccountÊµÌå´æÔÚÄÇÃ´±ØÈ»»áÖ´ĞĞµ½¸ÃÊÂ¼ş 
+	// ï¿½ï¿½ï¿½ï¿½AccountÊµï¿½ï¿½×¢ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ê±AccountÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½È»ï¿½ï¿½Ö´ï¿½Ğµï¿½ï¿½ï¿½ï¿½Â¼ï¿½ 
 	UKBEventData_selectAvatarGame* pEventData = NewObject<UKBEventData_selectAvatarGame>();
 	pEventData->avatarInfos = avatarInfos;
 	KBENGINE_EVENT_FIRE("selectAvatarGame", pEventData);

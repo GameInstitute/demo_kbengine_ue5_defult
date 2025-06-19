@@ -2,7 +2,6 @@
 
 #include "PlayerCharacter.h"
 #include "kbengine_ue4_demo.h"
-#include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 
 //////////////////////////////////////////////////////////////////////////
 // APlayerCharacter
@@ -79,16 +78,8 @@ void APlayerCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &APlayerCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &APlayerCharacter::TouchStopped);
-
-	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &APlayerCharacter::OnResetVR);
 }
 
-
-void APlayerCharacter::OnResetVR()
-{
-	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
-}
 
 void APlayerCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
